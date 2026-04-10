@@ -33,9 +33,10 @@ public class GDP
         System.out.println("United States: " + unitedSta);
 
         int maxVal = Integer.MIN_VALUE;
+        GDPData temp = dataset.get(0);
         for (int i = 0; i < dataset.size(); i++)
         {
-            dataset.getGdpLast();
+            temp.getGdpLast();
         }
     }
 }
