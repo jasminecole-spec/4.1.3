@@ -24,5 +24,18 @@ public class GDP
         int southAfr = GDPSearch.find(dataset, 0, dataset.size(), "South Africa");
         int unitedSta = GDPSearch.find(dataset, 0, dataset.size(), "United States");
         
+        System.out.println("\nCountries with largest GDPs in their continents:");
+        System.out.println("Australia: " + aust);
+        System.out.println("Brazil: " + brazil);
+        System.out.println("China: " + china);
+        System.out.println("Germany: " + german);
+        System.out.println("South Africa: " + southAfr);
+        System.out.println("United States: " + unitedSta);
+
+        int maxVal = Integer.MIN_VALUE;
+        for (int i = 0; i < dataset.size(); i++)
+        {
+            dataset.getGdpLast();
+        }
     }
 }
