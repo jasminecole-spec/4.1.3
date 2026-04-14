@@ -32,11 +32,17 @@ public class GDP
         System.out.println("South Africa: " + southAfr);
         System.out.println("United States: " + unitedSta);
 
-        int maxVal = Integer.MIN_VALUE;
-        GDPData temp = dataset.get(0);
+        double maxVal = Integer.MIN_VALUE;
+        String country = null;
         for (int i = 0; i < dataset.size(); i++)
         {
-            temp.getGdpLast();
+             GDPData temp = dataset.get(i);
+            if (temp.getGdpLast() > maxVal)
+            {
+                maxVal = temp.getGdpLast();
+                country = temp.getCountry();
+            }
         }
+        System.out.println(country + " : " + maxVal);
     }
 }
